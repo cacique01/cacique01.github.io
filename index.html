@@ -37,7 +37,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;background:var(--bg);color:var(--branco);font-family:var(--fonte);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:linear-gradient(rgba(3,12,25,.68),rgba(3,12,25,.76)),url("img/dashboard-tech.png") center center / cover fixed no-repeat;background-color:var(--bg);color:var(--branco);font-family:var(--fonte);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 p{margin:0}
 h1,h2,h3{margin:0;font-weight:900;letter-spacing:-.03em;line-height:1.02}
@@ -77,11 +77,7 @@ h1,h2,h3{margin:0;font-weight:900;letter-spacing:-.03em;line-height:1.02}
 .btn.mini{padding:9px 14px;font-size:14px;border-radius:10px;gap:8px}
 
 /* ---------- hero ---------- */
-.hero{padding:54px 0 70px;position:relative;overflow:hidden;
-  background:
-    radial-gradient(ellipse at 78% 45%,rgba(0,145,255,.22),transparent 38%),
-    radial-gradient(ellipse at 10% 5%,rgba(0,217,255,.12),transparent 34%),
-    linear-gradient(120deg,#061323 0%,#07182c 55%,#030a15 100%)}
+.hero{padding:54px 0 70px;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(3,12,25,.48) 0%,rgba(3,12,25,.28) 55%,rgba(3,12,25,.12) 100%)}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
 .eyebrow{color:var(--ciano);font-size:12px;font-weight:800;letter-spacing:3px;margin-bottom:22px;animation:sobe .8s both}
 .eyebrow i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ciano);box-shadow:0 0 12px var(--ciano);margin-right:10px}
@@ -120,7 +116,7 @@ section.bloco{padding:84px 0}
 .rotulo{display:inline-block;color:var(--ciano);font-size:12px;font-weight:800;letter-spacing:3px;margin-bottom:16px}
 .titulo{font-size:clamp(32px,4.6vw,52px);max-width:17ch}
 .sub{color:var(--suave);max-width:46ch;margin-top:16px}
-.alt{background:var(--bg2)}
+.alt{background:rgba(7,24,44,.42)}
 
 /* serviços */
 .servicos{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -162,7 +158,7 @@ section.bloco{padding:84px 0}
 
 /* chamada final */
 .final{padding:90px 0;text-align:left;
-  background:radial-gradient(ellipse at 85% 60%,rgba(0,145,255,.25),transparent 45%),linear-gradient(120deg,#061323,#07182c)}
+  background:radial-gradient(ellipse at 85% 60%,rgba(0,145,255,.14),transparent 45%),linear-gradient(120deg,rgba(6,19,35,.42),rgba(7,24,44,.42))}
 .final .titulo{max-width:15ch}
 .final .acoes{animation:none;margin-top:30px}
 
@@ -181,7 +177,7 @@ footer b{color:var(--ciano)}
 @media (max-width:900px){
   .menu a.l{display:none}
   .hero-grid,.sobre{grid-template-columns:1fr}
-  .hero{padding-top:36px}
+  .hero{padding-top:36px;background-position:center center}
   .retrato{height:470px;margin-top:10px}
   .moldura{height:400px;width:min(78%,300px)}
   .orbita.a{width:350px;height:350px}.orbita.b{width:400px;height:400px}
