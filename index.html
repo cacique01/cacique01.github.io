@@ -1,352 +1,1325 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DaviTech TI | Sites e sistemas web em Cuiabá e Várzea Grande</title>
-<meta name="description" content="Desenvolvimento de sites, sistemas e aplicações web para pequenos negócios de Cuiabá, Várzea Grande e região. Fale direto com o Davi pelo WhatsApp.">
-<meta name="theme-color" content="#061323">
-<link rel="canonical" href="https://davitech.com.br/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="DaviTech TI | Ideias que se transformam em soluções digitais">
-<meta property="og:description" content="Sites, sistemas e aplicações web para levar seu negócio mais longe.">
-<meta property="og:url" content="https://davitech.com.br/">
-<link rel="icon" href="img/logo.jpeg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DaviTech TI | Sites e sistemas web em Cuiabá e Várzea Grande</title>
+  <meta name="description"
+    content="Desenvolvimento de sites, sistemas e aplicações web para pequenos negócios de Cuiabá, Várzea Grande e região. Fale direto com o Davi pelo WhatsApp.">
+  <meta name="theme-color" content="#061323">
+  <link rel="canonical" href="https://davitech.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="DaviTech TI | Ideias que se transformam em soluções digitais">
+  <meta property="og:description" content="Sites, sistemas e aplicações web para levar seu negócio mais longe.">
+  <meta property="og:url" content="https://davitech.com.br/">
+  <link rel="icon" href="img/logo.jpeg">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-<!--
+  <!--
   ANÚNCIOS: quando criar o Pixel da Meta e o Google Analytics, cole os códigos aqui.
   Lembre de avisar os visitantes (LGPD) numa página de privacidade.
 -->
 
-<style>
-:root{
-  --bg:#050d19;
-  --bg2:#07182c;
-  --azul:#168bff;
-  --ciano:#00d9ff;
-  --branco:#f5fbff;
-  --suave:#a9bfd2;
-  --borda:rgba(0,217,255,.28);
-  --borda-forte:rgba(0,217,255,.6);
-  --fonte:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;background:linear-gradient(rgba(3,12,25,.68),rgba(3,12,25,.76)),url("img/dashboard-tech.png") center center / cover fixed no-repeat;background-color:var(--bg);color:var(--branco);font-family:var(--fonte);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit}
-p{margin:0}
-h1,h2,h3{margin:0;font-weight:900;letter-spacing:-.03em;line-height:1.02}
-:focus-visible{outline:3px solid var(--ciano);outline-offset:3px;border-radius:6px}
-.wrap{width:min(1160px,100% - 44px);margin-inline:auto}
+  <style>
+    :root {
+      --bg: #050d19;
+      --bg2: #07182c;
+      --azul: #168bff;
+      --ciano: #00d9ff;
+      --branco: #f5fbff;
+      --suave: #a9bfd2;
+      --borda: rgba(0, 217, 255, .28);
+      --borda-forte: rgba(0, 217, 255, .6);
+      --fonte: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
 
-/* ---------- fundo em grade ---------- */
-.grade{position:relative;isolation:isolate}
-.grade::before{
-  content:"";position:absolute;inset:0;z-index:-1;opacity:.17;pointer-events:none;
-  background-image:linear-gradient(rgba(45,151,210,.28) 1px,transparent 1px),linear-gradient(90deg,rgba(45,151,210,.28) 1px,transparent 1px);
-  background-size:42px 42px;
-  mask-image:linear-gradient(180deg,#000 30%,transparent 100%);
-}
+    * {
+      box-sizing: border-box
+    }
 
-/* ---------- topo ---------- */
-.topo{position:sticky;top:0;z-index:30;background:rgba(5,13,25,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,217,255,.14)}
-.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
-.marca{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:900;letter-spacing:2px;font-size:18px;white-space:nowrap}
-.marca b{color:var(--ciano)}
-.marca-sinal{color:var(--ciano);border:1px solid var(--ciano);padding:6px 9px;border-radius:8px;font:700 15px ui-monospace,Menlo,Consolas,monospace;box-shadow:0 0 16px rgba(0,217,255,.28);letter-spacing:0}
-.menu{display:flex;align-items:center;gap:30px}
-.menu a{text-decoration:none;font-size:15px;font-weight:600;color:var(--suave)}
-.menu a:hover{color:var(--ciano)}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 76px
+    }
 
-/* ---------- botões ---------- */
-.btn{display:inline-flex;align-items:center;gap:14px;padding:13px 18px;border-radius:12px;text-decoration:none;color:#fff;font-weight:700;transition:transform .25s,box-shadow .25s}
-.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,190,255,.24)}
-.btn small{display:block;font-size:11px;letter-spacing:1.6px;font-weight:700;opacity:.82;margin-bottom:3px}
-.btn strong{display:block;font-size:16px;letter-spacing:.2px}
-.btn .ic{font-size:24px;line-height:1}
-.btn .seta{margin-left:auto;color:var(--ciano);font-weight:800}
-.btn.principal{background:linear-gradient(110deg,#0087cf,#0752a8);border:1px solid #00cfff}
-.btn.principal .ic{color:#fff}
-.btn.secundario{background:rgba(6,23,42,.75);border:1px solid var(--borda-forte)}
-.btn.secundario .ic{color:var(--ciano)}
-.btn.mini{padding:9px 14px;font-size:14px;border-radius:10px;gap:8px}
+    body {
+      margin: 0;
+      background: linear-gradient(rgba(3, 12, 25, .68), rgba(3, 12, 25, .76)), url("img/dashboard-tech.png") center center / cover fixed no-repeat;
+      background-color: var(--bg);
+      color: var(--branco);
+      font-family: var(--fonte);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden
+    }
 
-/* ---------- hero ---------- */
-.hero{padding:54px 0 70px;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(3,12,25,.48) 0%,rgba(3,12,25,.28) 55%,rgba(3,12,25,.12) 100%)}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
-.eyebrow{color:var(--ciano);font-size:12px;font-weight:800;letter-spacing:3px;margin-bottom:22px;animation:sobe .8s both}
-.eyebrow i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ciano);box-shadow:0 0 12px var(--ciano);margin-right:10px}
-.hero h1{font-size:clamp(40px,5.6vw,70px);letter-spacing:-.04em;line-height:.99;animation:sobe .9s .1s both}
-.hero h1 em{font-style:normal;color:var(--ciano);text-shadow:0 0 24px rgba(0,217,255,.3)}
-.hero .intro{max-width:30em;color:#bccddc;margin:24px 0 28px;font-size:18px;animation:sobe .9s .2s both}
-.pontos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;max-width:560px;animation:sobe .9s .3s both}
-.pontos li{display:flex;align-items:center;gap:12px}
-.pontos .ico{display:grid;place-items:center;flex:0 0 38px;height:38px;border:1px solid var(--borda-forte);color:var(--ciano);border-radius:10px;font:700 14px ui-monospace,Menlo,Consolas,monospace;box-shadow:inset 0 0 14px rgba(0,217,255,.08)}
-.pontos b{display:block;font-size:14px;letter-spacing:.2px}
-.pontos span span{display:block;color:#9bb3c8;font-size:13px;line-height:1.35;margin-top:2px}
-.acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;animation:sobe .9s .4s both}
-.acoes .btn{min-width:230px}
+    a {
+      color: inherit
+    }
 
-/* retrato */
-.retrato{position:relative;height:520px;display:flex;align-items:center;justify-content:center;animation:surge 1.2s .2s both}
-.moldura{position:relative;width:min(84%,340px);height:450px;overflow:hidden;border-radius:170px 170px 26px 26px;border:1px solid rgba(0,217,255,.85);box-shadow:0 0 0 8px rgba(0,217,255,.045),0 0 56px rgba(0,145,255,.3)}
-.moldura img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
-.moldura::after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(3,12,25,.9))}
-.orbita{position:absolute;border:1px solid rgba(0,217,255,.35);border-radius:50%;pointer-events:none}
-.orbita.a{width:420px;height:420px;border-left-color:transparent;border-bottom-color:rgba(0,217,255,.85);animation:gira 28s linear infinite}
-.orbita.b{width:480px;height:480px;border-style:dashed;opacity:.5;animation:gira 42s linear infinite reverse}
-.flutua{position:absolute;display:flex;align-items:center;gap:10px;background:rgba(4,19,36,.9);border:1px solid var(--borda-forte);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.35);backdrop-filter:blur(10px)}
-.flutua.um{top:64px;left:-6px;padding:10px 14px;font-size:11px;letter-spacing:1.4px;font-weight:700;color:#dffaff;animation:flutua 4s ease-in-out infinite}
-.flutua.dois{right:-6px;bottom:66px;padding:12px 15px;animation:flutua 4.5s ease-in-out infinite reverse}
-.pulso{width:8px;height:8px;border-radius:50%;background:#00e4ff;box-shadow:0 0 12px #00e4ff}
-.ok{display:grid;place-items:center;width:28px;height:28px;color:#001521;background:var(--ciano);border-radius:8px;font-weight:900}
-.flutua.dois b{display:block;font-size:13px}
-.flutua.dois small{display:block;color:#9bb3c8;font-size:12px;margin-top:2px}
-.legenda{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);text-align:center;white-space:nowrap;text-shadow:0 2px 8px #000}
-.legenda b{display:block;font-size:22px;letter-spacing:6px}
-.legenda span{display:block;color:var(--ciano);font-size:11px;letter-spacing:2px;margin-top:4px;font-weight:700}
+    p {
+      margin: 0
+    }
 
-/* ---------- seções ---------- */
-section.bloco{padding:84px 0}
-.rotulo{display:inline-block;color:var(--ciano);font-size:12px;font-weight:800;letter-spacing:3px;margin-bottom:16px}
-.titulo{font-size:clamp(32px,4.6vw,52px);max-width:17ch}
-.sub{color:var(--suave);max-width:46ch;margin-top:16px}
-.alt{background:rgba(7,24,44,.42)}
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.02
+    }
 
-/* serviços */
-.servicos{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.servico{padding:26px;border:1px solid var(--borda);border-radius:16px;background:linear-gradient(160deg,rgba(7,24,44,.9),rgba(5,13,25,.9));transition:border-color .25s,transform .25s}
-.servico:hover{border-color:var(--borda-forte);transform:translateY(-4px)}
-.servico .ico{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--borda-forte);color:var(--ciano);border-radius:11px;font:700 17px ui-monospace,Menlo,Consolas,monospace;margin-bottom:18px;box-shadow:inset 0 0 14px rgba(0,217,255,.08)}
-.servico h3{font-size:22px;letter-spacing:-.02em;margin-bottom:10px}
-.servico p{color:var(--suave);font-size:16px}
-.servico.destaque{grid-column:span 2;display:grid;grid-template-columns:auto 1fr;gap:0 22px;align-items:start}
-.servico.destaque .ico{margin:0;grid-row:span 2}
+    :focus-visible {
+      outline: 3px solid var(--ciano);
+      outline-offset: 3px;
+      border-radius: 6px
+    }
 
-/* trabalhos: janelas de navegador */
-.trabalhos{margin-top:44px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.janela{border:1px solid var(--borda);border-radius:14px;background:var(--bg);overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
-.janela:hover{border-color:var(--borda-forte);transform:translateY(-4px)}
-.barra{display:flex;align-items:center;gap:8px;padding:11px 14px;background:rgba(0,217,255,.06);border-bottom:1px solid var(--borda)}
-.barra i{width:9px;height:9px;border-radius:50%;background:rgba(0,217,255,.35)}
-.barra span{margin-left:8px;font:500 13px ui-monospace,Menlo,Consolas,monospace;color:var(--suave);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.janela .corpo{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
-.janela h3{font-size:22px;letter-spacing:-.02em}
-.janela p{color:var(--suave);font-size:16px}
-.janela a.abrir{margin-top:auto;padding-top:12px;color:var(--ciano);font-weight:800;text-decoration:none;font-size:15px}
-.janela a.abrir:hover{text-decoration:underline;text-underline-offset:4px}
-.janela:last-child:nth-child(odd){grid-column:span 2}
+    .wrap {
+      width: min(1160px, 100% - 44px);
+      margin-inline: auto
+    }
 
-/* como funciona: sequência real */
-.passos{margin:48px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:p;position:relative}
-.passos::before{content:"";position:absolute;left:0;right:0;top:21px;height:1px;background:linear-gradient(90deg,var(--ciano),rgba(0,217,255,.1))}
-.passos li{counter-increment:p;position:relative;padding-top:56px}
-.passos li::before{content:counter(p);position:absolute;top:0;left:0;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--bg);border:1px solid var(--ciano);color:var(--ciano);font-weight:900;box-shadow:0 0 18px rgba(0,217,255,.25)}
-.passos b{display:block;font-size:20px;margin-bottom:8px}
-.passos span{color:var(--suave);font-size:16px;display:block}
+    /* ---------- fundo em grade ---------- */
+    .grade {
+      position: relative;
+      isolation: isolate
+    }
 
-/* sobre */
-.sobre{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
-.sobre p{color:#bccddc;max-width:46ch;margin-top:16px}
-.tec{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
-.tec li{padding:9px 16px;border:1px solid var(--borda-forte);border-radius:999px;font-weight:600;font-size:15px;background:rgba(0,217,255,.05)}
+    .grade::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: .17;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(45, 151, 210, .28) 1px, transparent 1px), linear-gradient(90deg, rgba(45, 151, 210, .28) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(180deg, #000 30%, transparent 100%);
+    }
 
-/* chamada final */
-.final{padding:90px 0;text-align:left;
-  background:radial-gradient(ellipse at 85% 60%,rgba(0,145,255,.14),transparent 45%),linear-gradient(120deg,rgba(6,19,35,.42),rgba(7,24,44,.42))}
-.final .titulo{max-width:15ch}
-.final .acoes{animation:none;margin-top:30px}
+    /* ---------- topo ---------- */
+    .topo {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(5, 13, 25, .82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 217, 255, .14)
+    }
 
-footer{border-top:1px solid rgba(0,217,255,.2);padding:26px 0 96px;color:#8ca7bd;font-size:13px;letter-spacing:1.5px;font-weight:600}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
-footer b{color:var(--ciano)}
+    .topo .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      height: 68px
+    }
 
-/* barra fixa no celular */
-.fixo{display:none}
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: 2px;
+      font-size: 18px;
+      white-space: nowrap
+    }
 
-@keyframes sobe{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-@keyframes surge{from{opacity:0}to{opacity:1}}
-@keyframes flutua{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-@keyframes gira{to{transform:rotate(360deg)}}
+    .marca b {
+      color: var(--ciano)
+    }
 
-@media (max-width:900px){
-  .menu a.l{display:none}
-  .hero-grid,.sobre{grid-template-columns:1fr}
-  .hero{padding-top:36px;background-position:center center}
-  .retrato{height:470px;margin-top:10px}
-  .moldura{height:400px;width:min(78%,300px)}
-  .orbita.a{width:350px;height:350px}.orbita.b{width:400px;height:400px}
-  .servicos{grid-template-columns:1fr 1fr}
-  .servico.destaque{grid-column:span 2}
-  .passos{grid-template-columns:1fr 1fr;gap:34px 26px}
-  .passos::before{display:none}
-}
-@media (max-width:640px){
-  body{font-size:16px}
-  section.bloco{padding:60px 0}
-  .pontos{grid-template-columns:1fr}
-  .acoes .btn{flex:1 1 100%}
-  .servicos,.trabalhos{grid-template-columns:1fr}
-  .servico.destaque,.janela:last-child:nth-child(odd){grid-column:auto}
-  .servico.destaque{display:block}
-  .servico.destaque .ico{margin-bottom:18px}
-  .passos{grid-template-columns:1fr}
-  .topo .btn.mini{display:none}
-  .flutua.um{left:0;top:40px}.flutua.dois{right:0;bottom:50px}
-  .fixo{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(5,13,25,.96);border-top:1px solid var(--borda)}
-  .fixo .btn{width:100%;justify-content:center;padding:15px;font-size:17px}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-}
-</style>
+    .marca-sinal {
+      color: var(--ciano);
+      border: 1px solid var(--ciano);
+      padding: 6px 9px;
+      border-radius: 8px;
+      font: 700 15px ui-monospace, Menlo, Consolas, monospace;
+      box-shadow: 0 0 16px rgba(0, 217, 255, .28);
+      letter-spacing: 0
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 30px
+    }
+
+    .menu a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--suave)
+    }
+
+    .menu a:hover {
+      color: var(--ciano)
+    }
+
+    /* ---------- botões ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 13px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      transition: transform .25s, box-shadow .25s
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 190, 255, .24)
+    }
+
+    .btn small {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 1.6px;
+      font-weight: 700;
+      opacity: .82;
+      margin-bottom: 3px
+    }
+
+    .btn strong {
+      display: block;
+      font-size: 16px;
+      letter-spacing: .2px
+    }
+
+    .btn .ic {
+      font-size: 24px;
+      line-height: 1
+    }
+
+    .btn .seta {
+      margin-left: auto;
+      color: var(--ciano);
+      font-weight: 800
+    }
+
+    .btn.principal {
+      background: linear-gradient(110deg, #0087cf, #0752a8);
+      border: 1px solid #00cfff
+    }
+
+    .btn.principal .ic {
+      color: #fff
+    }
+
+    .btn.secundario {
+      background: rgba(6, 23, 42, .75);
+      border: 1px solid var(--borda-forte)
+    }
+
+    .btn.secundario .ic {
+      color: var(--ciano)
+    }
+
+    .btn.mini {
+      padding: 9px 14px;
+      font-size: 14px;
+      border-radius: 10px;
+      gap: 8px
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      padding: 54px 0 70px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(90deg, rgba(3, 12, 25, .48) 0%, rgba(3, 12, 25, .28) 55%, rgba(3, 12, 25, .12) 100%)
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 30px;
+      align-items: center
+    }
+
+    .eyebrow {
+      color: var(--ciano);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 22px;
+      animation: sobe .8s both
+    }
+
+    .eyebrow i {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--ciano);
+      box-shadow: 0 0 12px var(--ciano);
+      margin-right: 10px
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 5.6vw, 70px);
+      letter-spacing: -.04em;
+      line-height: .99;
+      animation: sobe .9s .1s both
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--ciano);
+      text-shadow: 0 0 24px rgba(0, 217, 255, .3)
+    }
+
+    .hero .intro {
+      max-width: 30em;
+      color: #bccddc;
+      margin: 24px 0 28px;
+      font-size: 18px;
+      animation: sobe .9s .2s both
+    }
+
+    .pontos {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 20px;
+      max-width: 560px;
+      animation: sobe .9s .3s both
+    }
+
+    .pontos li {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .pontos .ico {
+      display: grid;
+      place-items: center;
+      flex: 0 0 38px;
+      height: 38px;
+      border: 1px solid var(--borda-forte);
+      color: var(--ciano);
+      border-radius: 10px;
+      font: 700 14px ui-monospace, Menlo, Consolas, monospace;
+      box-shadow: inset 0 0 14px rgba(0, 217, 255, .08)
+    }
+
+    .pontos b {
+      display: block;
+      font-size: 14px;
+      letter-spacing: .2px
+    }
+
+    .pontos span span {
+      display: block;
+      color: #9bb3c8;
+      font-size: 13px;
+      line-height: 1.35;
+      margin-top: 2px
+    }
+
+    .acoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+      animation: sobe .9s .4s both
+    }
+
+    .acoes .btn {
+      min-width: 230px
+    }
+
+    /* retrato */
+    .retrato {
+      position: relative;
+      height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: surge 1.2s .2s both
+    }
+
+    .moldura {
+      position: relative;
+      width: min(84%, 340px);
+      height: 450px;
+      overflow: hidden;
+      border-radius: 170px 170px 26px 26px;
+      border: 1px solid rgba(0, 217, 255, .85);
+      box-shadow: 0 0 0 8px rgba(0, 217, 255, .045), 0 0 56px rgba(0, 145, 255, .3)
+    }
+
+    .moldura img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 20%;
+      display: block
+    }
+
+    .moldura::after {
+      content: "";
+      position: absolute;
+      inset: 55% 0 0;
+      background: linear-gradient(transparent, rgba(3, 12, 25, .9))
+    }
+
+    .orbita {
+      position: absolute;
+      border: 1px solid rgba(0, 217, 255, .35);
+      border-radius: 50%;
+      pointer-events: none
+    }
+
+    .orbita.a {
+      width: 420px;
+      height: 420px;
+      border-left-color: transparent;
+      border-bottom-color: rgba(0, 217, 255, .85);
+      animation: gira 28s linear infinite
+    }
+
+    .orbita.b {
+      width: 480px;
+      height: 480px;
+      border-style: dashed;
+      opacity: .5;
+      animation: gira 42s linear infinite reverse
+    }
+
+    .flutua {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(4, 19, 36, .9);
+      border: 1px solid var(--borda-forte);
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+      backdrop-filter: blur(10px)
+    }
+
+    .flutua.um {
+      top: 64px;
+      left: -6px;
+      padding: 10px 14px;
+      font-size: 11px;
+      letter-spacing: 1.4px;
+      font-weight: 700;
+      color: #dffaff;
+      animation: flutua 4s ease-in-out infinite
+    }
+
+    .flutua.dois {
+      right: -6px;
+      bottom: 66px;
+      padding: 12px 15px;
+      animation: flutua 4.5s ease-in-out infinite reverse
+    }
+
+    .pulso {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00e4ff;
+      box-shadow: 0 0 12px #00e4ff
+    }
+
+    .ok {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      color: #001521;
+      background: var(--ciano);
+      border-radius: 8px;
+      font-weight: 900
+    }
+
+    .flutua.dois b {
+      display: block;
+      font-size: 13px
+    }
+
+    .flutua.dois small {
+      display: block;
+      color: #9bb3c8;
+      font-size: 12px;
+      margin-top: 2px
+    }
+
+    .legenda {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      white-space: nowrap;
+      text-shadow: 0 2px 8px #000
+    }
+
+    .legenda b {
+      display: block;
+      font-size: 22px;
+      letter-spacing: 6px
+    }
+
+    .legenda span {
+      display: block;
+      color: var(--ciano);
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-top: 4px;
+      font-weight: 700
+    }
+
+    /* ---------- seções ---------- */
+    section.bloco {
+      padding: 84px 0
+    }
+
+    .rotulo {
+      display: inline-block;
+      color: var(--ciano);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 16px
+    }
+
+    .titulo {
+      font-size: clamp(32px, 4.6vw, 52px);
+      max-width: 17ch
+    }
+
+    .sub {
+      color: var(--suave);
+      max-width: 46ch;
+      margin-top: 16px
+    }
+
+    .alt {
+      background: rgba(7, 24, 44, .42)
+    }
+
+    /* serviços */
+    .servicos {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .servico {
+      padding: 26px;
+      border: 1px solid var(--borda);
+      border-radius: 16px;
+      background: linear-gradient(160deg, rgba(7, 24, 44, .9), rgba(5, 13, 25, .9));
+      transition: border-color .25s, transform .25s
+    }
+
+    .servico:hover {
+      border-color: var(--borda-forte);
+      transform: translateY(-4px)
+    }
+
+    .servico .ico {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--borda-forte);
+      color: var(--ciano);
+      border-radius: 11px;
+      font: 700 17px ui-monospace, Menlo, Consolas, monospace;
+      margin-bottom: 18px;
+      box-shadow: inset 0 0 14px rgba(0, 217, 255, .08)
+    }
+
+    .servico h3 {
+      font-size: 22px;
+      letter-spacing: -.02em;
+      margin-bottom: 10px
+    }
+
+    .servico p {
+      color: var(--suave);
+      font-size: 16px
+    }
+
+    .servico.destaque {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0 22px;
+      align-items: start
+    }
+
+    .servico.destaque .ico {
+      margin: 0;
+      grid-row: span 2
+    }
+
+    /* trabalhos: janelas de navegador */
+    .trabalhos {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px
+    }
+
+    .janela {
+      border: 1px solid var(--borda);
+      border-radius: 14px;
+      background: var(--bg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color .25s, transform .25s
+    }
+
+    .janela:hover {
+      border-color: var(--borda-forte);
+      transform: translateY(-4px)
+    }
+
+    .barra {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 14px;
+      background: rgba(0, 217, 255, .06);
+      border-bottom: 1px solid var(--borda)
+    }
+
+    .barra i {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(0, 217, 255, .35)
+    }
+
+    .barra span {
+      margin-left: 8px;
+      font: 500 13px ui-monospace, Menlo, Consolas, monospace;
+      color: var(--suave);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
+    .janela .corpo {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1
+    }
+
+    .janela h3 {
+      font-size: 22px;
+      letter-spacing: -.02em
+    }
+
+    .janela p {
+      color: var(--suave);
+      font-size: 16px
+    }
+
+    .janela a.abrir {
+      margin-top: auto;
+      padding-top: 12px;
+      color: var(--ciano);
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 15px
+    }
+
+    .janela a.abrir:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px
+    }
+
+    .janela:last-child:nth-child(odd) {
+      grid-column: span 2
+    }
+
+    /* como funciona: sequência real */
+    .passos {
+      margin: 48px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 26px;
+      counter-reset: p;
+      position: relative
+    }
+
+    .passos::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 21px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--ciano), rgba(0, 217, 255, .1))
+    }
+
+    .passos li {
+      counter-increment: p;
+      position: relative;
+      padding-top: 56px
+    }
+
+    .passos li::before {
+      content: counter(p);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1px solid var(--ciano);
+      color: var(--ciano);
+      font-weight: 900;
+      box-shadow: 0 0 18px rgba(0, 217, 255, .25)
+    }
+
+    .passos b {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 8px
+    }
+
+    .passos span {
+      color: var(--suave);
+      font-size: 16px;
+      display: block
+    }
+
+    /* sobre */
+    .sobre {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
+      align-items: center
+    }
+
+    .sobre p {
+      color: #bccddc;
+      max-width: 46ch;
+      margin-top: 16px
+    }
+
+    .tec {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px
+    }
+
+    .tec li {
+      padding: 9px 16px;
+      border: 1px solid var(--borda-forte);
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 15px;
+      background: rgba(0, 217, 255, .05)
+    }
+
+    /* chamada final */
+    .final {
+      padding: 90px 0;
+      text-align: left;
+      background: radial-gradient(ellipse at 85% 60%, rgba(0, 145, 255, .14), transparent 45%), linear-gradient(120deg, rgba(6, 19, 35, .42), rgba(7, 24, 44, .42))
+    }
+
+    .final .titulo {
+      max-width: 15ch
+    }
+
+    .final .acoes {
+      animation: none;
+      margin-top: 30px
+    }
+
+    footer {
+      border-top: 1px solid rgba(0, 217, 255, .2);
+      padding: 26px 0 96px;
+      color: #8ca7bd;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      font-weight: 600
+    }
+
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px
+    }
+
+    footer b {
+      color: var(--ciano)
+    }
+
+    /* barra fixa no celular */
+    .fixo {
+      display: none
+    }
+
+    @keyframes sobe {
+      from {
+        opacity: 0;
+        transform: translateY(18px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes surge {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes flutua {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-9px)
+      }
+    }
+
+    @keyframes gira {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    @media (max-width:900px) {
+      .menu a.l {
+        display: none
+      }
+
+      .hero-grid,
+      .sobre {
+        grid-template-columns: 1fr
+      }
+
+      .hero {
+        padding-top: 36px;
+        background-position: center center
+      }
+
+      .retrato {
+        height: 470px;
+        margin-top: 10px
+      }
+
+      .moldura {
+        height: 400px;
+        width: min(78%, 300px)
+      }
+
+      .orbita.a {
+        width: 350px;
+        height: 350px
+      }
+
+      .orbita.b {
+        width: 400px;
+        height: 400px
+      }
+
+      .servicos {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .servico.destaque {
+        grid-column: span 2
+      }
+
+      .passos {
+        grid-template-columns: 1fr 1fr;
+        gap: 34px 26px
+      }
+
+      .passos::before {
+        display: none
+      }
+    }
+
+    @media (max-width:640px) {
+      body {
+        font-size: 16px
+      }
+
+      section.bloco {
+        padding: 60px 0
+      }
+
+      .pontos {
+        grid-template-columns: 1fr
+      }
+
+      .acoes .btn {
+        flex: 1 1 100%
+      }
+
+      .servicos,
+      .trabalhos {
+        grid-template-columns: 1fr
+      }
+
+      .servico.destaque,
+      .janela:last-child:nth-child(odd) {
+        grid-column: auto
+      }
+
+      .servico.destaque {
+        display: block
+      }
+
+      .servico.destaque .ico {
+        margin-bottom: 18px
+      }
+
+      .passos {
+        grid-template-columns: 1fr
+      }
+
+      .topo .btn.mini {
+        display: none
+      }
+
+      .flutua.um {
+        left: 0;
+        top: 40px
+      }
+
+      .flutua.dois {
+        right: 0;
+        bottom: 50px
+      }
+
+      .fixo {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 40;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(5, 13, 25, .96);
+        border-top: 1px solid var(--borda)
+      }
+
+      .fixo .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 15px;
+        font-size: 17px
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important
+      }
+    }
+
+    /* BOTÃO MENU HAMBÚRGUER */
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      padding: 10px;
+      background: rgba(0, 217, 255, .08);
+      border: 1px solid var(--borda-forte);
+      border-radius: 10px;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      z-index: 50;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 23px;
+      height: 2px;
+      background: var(--ciano);
+      border-radius: 5px;
+      transition: .3s;
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 900px) {
+
+      .topo .wrap {
+        position: relative;
+      }
+
+      .menu-toggle {
+        display: flex;
+        margin-left: auto;
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        top: 68px;
+        right: 0;
+        width: min(280px, calc(100vw - 44px));
+        padding: 18px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        background: #07182c;
+        border: 1px solid var(--borda-forte);
+        border-radius: 14px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, .5);
+      }
+
+      .menu.aberto {
+        display: flex;
+      }
+
+      .menu a.l {
+        display: block;
+        padding: 8px;
+      }
+
+      .menu .btn.mini {
+        display: inline-flex;
+        justify-content: center;
+      }
+
+      .menu-toggle.ativo span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .menu-toggle.ativo span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-toggle.ativo span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="topo">
-  <div class="wrap">
-    <a class="marca" href="#inicio" aria-label="DaviTech TI, início"><span class="marca-sinal"><img src="img/logo.jpeg" alt="DaviTech TI" width="45" height="45"></span><span>DAVITECH <b>TI</b></span></a>
-    <nav class="menu" aria-label="Principal">
-      <a class="l" href="#servicos">Serviços</a>
-      <a class="l" href="#trabalhos">Trabalhos</a>
-      <a class="l" href="#como">Como funciona</a>
-      <a class="btn principal mini" data-wa href="https://wa.me/5565981044637" target="_blank" rel="noopener"><img src="img/whats.png" alt="WhatsApp" width="25" height="25">Chamar no WhatsApp</a>
-    </nav>
-  </div>
-</header>
+  <header class="topo">
+    <div class="wrap">
+      <a class="marca" href="#inicio" aria-label="DaviTech TI, início"><span class="marca-sinal"><img
+            src="img/logo.jpeg" alt="DaviTech TI" width="45" height="45"></span><span>DAVITECH <b>TI</b></span></a>
+      <nav class="menu" id="menu-principal" aria-label="Principal">
+        <a class="l" href="#servicos">Serviços</a>
+        <a class="l" href="#trabalhos">Trabalhos</a>
+        <a class="l" href="#como">Como funciona</a>
+        <a class="l" href="#sobre">Sobre mim</a>
+        <a class="btn principal mini" data-wa href="https://wa.me/5565981044637" target="_blank" rel="noopener">Chamar
+          no WhatsApp</a>
+      </nav>
 
-<main id="inicio">
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="menu-principal">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-  <!-- HERO -->
-  <section class="hero grade">
-    <div class="wrap hero-grid">
-      <div>
-        <p class="eyebrow"><i></i>SEU PROJETO ONLINE DO JEITO CERTO</p>
-        <h1>Ideias que se <em>transformam</em> em soluções digitais.</h1>
-        <p class="intro">Desenvolvimento de sites, sistemas e aplicações web para levar seu negócio mais longe. Atendo Cuiabá, Várzea Grande e região.</p>
-        <ul class="pontos">
-          <li><span class="ico"><></span><span><b>Sites personalizados</b><span>Design moderno e profissional</span></span></li>
-          <li><span class="ico">▣</span><span><b>Sistemas web</b><span>Organização e praticidade para seu negócio</span></span></li>
-          <li><span class="ico">↗</span><span><b>Rápidos no celular</b><span>Funciona bem no celular e no computador</span></span></li>
-          <li><span class="ico">✆</span><span><b>Atendimento direto</b><span>Você conversa comigo, sem intermediários</span></span></li>
-        </ul>
-        <div class="acoes">
-          <a class="btn principal" data-wa href="https://wa.me/5565981044637" target="_blank" rel="noopener"><img src="img/whats.png" alt="WhatsApp" width="25" height="25"><span><small>FALE COMIGO</small><strong>(65) 98104-4637</strong></span><b class="seta">↗</b></a>
-          <a class="btn secundario" href="https://instagram.com/davitech_ti" target="_blank" rel="noopener"><img src="img/insta.png" alt="Instagram" width="25" height="25"><span><small>ACOMPANHE</small><strong>@davitech_ti</strong></span><b class="seta">↗</b></a>
+  <main id="inicio">
+
+    <!-- HERO -->
+    <section class="hero grade">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow"><i></i>SEU PROJETO ONLINE DO JEITO CERTO</p>
+          <h1>Ideias que se <em>transformam</em> em soluções digitais.</h1>
+          <p class="intro">Desenvolvimento de sites, sistemas e aplicações web para levar seu negócio mais longe. Atendo
+            Cuiabá, Várzea Grande e região.</p>
+          <ul class="pontos">
+            <li><span class="ico">
+                <>
+              </span><span><b>Sites personalizados</b><span>Design moderno e profissional</span></span></li>
+            <li><span class="ico">▣</span><span><b>Sistemas web</b><span>Organização e praticidade para seu
+                  negócio</span></span></li>
+            <li><span class="ico">↗</span><span><b>Rápidos no celular</b><span>Funciona bem no celular e no
+                  computador</span></span></li>
+            <li><span class="ico">✆</span><span><b>Atendimento direto</b><span>Você conversa comigo, sem
+                  intermediários</span></span></li>
+          </ul>
+          <div class="acoes">
+            <a class="btn principal" data-wa href="https://wa.me/5565981044637" target="_blank" rel="noopener"><img
+                src="img/whats.png" alt="WhatsApp" width="25" height="25"><span><small>FALE COMIGO</small><strong>(65)
+                  98104-4637</strong></span><b class="seta">↗</b></a>
+            <a class="btn secundario" href="https://instagram.com/davitech_ti" target="_blank" rel="noopener"><img
+                src="img/insta.png" alt="Instagram" width="25"
+                height="25"><span><small>ACOMPANHE</small><strong>@davitech_ti</strong></span><b class="seta">↗</b></a>
+          </div>
+        </div>
+
+        <div class="retrato">
+          <div class="orbita a"></div>
+          <div class="orbita b"></div>
+          <div class="moldura"><img src="img/minha foto.jpeg" alt="Davi, fundador da DaviTech TI" width="540"
+              height="675"></div>
+          <div class="flutua um"><span class="pulso"></span>SITES E SISTEMAS</div>
+          <div class="flutua dois"><span class="ok">✓</span><span><b>Seu próximo projeto</b><small>começa com uma
+                ideia.</small></span></div>
+          <div class="legenda"><b>DAVI</b><span>DESENVOLVEDOR • DAVITECH TI</span></div>
         </div>
       </div>
+    </section>
 
-      <div class="retrato">
-        <div class="orbita a"></div><div class="orbita b"></div>
-        <div class="moldura"><img src="img/minha foto.jpeg" alt="Davi, fundador da DaviTech TI" width="540" height="675"></div>
-        <div class="flutua um"><span class="pulso"></span>SITES E SISTEMAS</div>
-        <div class="flutua dois"><span class="ok">✓</span><span><b>Seu próximo projeto</b><small>começa com uma ideia.</small></span></div>
-        <div class="legenda"><b>DAVI</b><span>DESENVOLVEDOR • DAVITECH TI</span></div>
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="bloco grade">
+      <div class="wrap">
+        <span class="rotulo">SERVIÇOS</span>
+        <h2 class="titulo">O que a DaviTech entrega</h2>
+        <p class="sub">Cada projeto começa pela rotina do seu negócio. Eu construo só o que você vai usar de verdade.
+        </p>
+        <div class="servicos">
+          <article class="servico destaque"><span class="ico">&lt;/&gt;</span>
+            <h3>Site de vendas</h3>
+            <p>Página feita para receber o clique do anúncio e levar o cliente ao seu WhatsApp, com preços, fotos e
+              perguntas frequentes.</p>
+          </article>
+          <article class="servico"><span class="ico">▣</span>
+            <h3>Sistema de vendas e estoque</h3>
+            <p>Registre vendas, acompanhe estoque, metas e gastos pelo celular, com login e comprovante em PDF.</p>
+          </article>
+          <article class="servico"><span class="ico"><img src="img/whats.png" alt="WhatsApp" width="25"
+                height="25"></span>
+            <h3>Atendimento no WhatsApp</h3>
+            <p>Respostas automáticas, avisos e fidelização de clientes ligados ao seu sistema.</p>
+          </article>
+          <article class="servico"><span class="ico">▤</span>
+            <h3>Painel de dados</h3>
+            <p>Os números do negócio em gráficos claros no Power BI, para decidir sem adivinhar.</p>
+          </article>
+          <article class="servico"><span class="ico">⬒</span>
+            <h3>App instalável no celular</h3>
+            <p>Aplicativo que o cliente instala direto do navegador, sem precisar de loja de aplicativos.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos" class="bloco grade">
+    <!-- TRABALHOS -->
+    <section id="trabalhos" class="bloco alt grade">
+      <div class="wrap">
+        <span class="rotulo">PROJETOS NO AR</span>
+        <h2 class="titulo">Trabalhos reais, abertos para você conferir</h2>
+        <div class="trabalhos">
+          <article class="janela">
+            <div class="barra"><i></i><i></i><i></i><span>estercoturbinado.davitech.com.br</span></div>
+            <div class="corpo">
+              <h3>Esterco Turbinado</h3>
+              <p>Página de venda de adubo orgânico, com pedido direto pelo WhatsApp.</p><a class="abrir"
+                href="https://estercoturbinado.davitech.com.br" target="_blank" rel="noopener">Abrir site ↗</a>
+            </div>
+          </article>
+          <article class="janela">
+            <div class="barra"><i></i><i></i><i></i><span>vendaadubo.davitech.com.br</span></div>
+            <div class="corpo">
+              <h3>Sistema de vendas Gatti</h3>
+              <p>Vendas, histórico, metas, gastos e estoque, com acesso por login.</p><a class="abrir"
+                href="https://vendaadubo.davitech.com.br" target="_blank" rel="noopener">Abrir site ↗</a>
+            </div>
+          </article>
+          <article class="janela">
+            <div class="barra"><i></i><i></i><i></i><span>guiaadubo.davitech.com.br</span></div>
+            <div class="corpo">
+              <h3>Área do lote</h3>
+              <p>Página pós-compra com guias em PDF de manejo para cada planta.</p><a class="abrir"
+                href="https://guiaadubo.davitech.com.br" target="_blank" rel="noopener">Abrir site ↗</a>
+            </div>
+          </article>
+          <article class="janela">
+            <div class="barra"><i></i><i></i><i></i><span>fidelizadosgatti.davitech.com.br</span></div>
+            <div class="corpo">
+              <h3>Comunidade Gatti</h3>
+              <p>Clube de clientes com pontos, ranking e grupo no WhatsApp.</p><a class="abrir"
+                href="https://fidelizadosgatti.davitech.com.br" target="_blank" rel="noopener">Abrir site ↗</a>
+            </div>
+          </article>
+          <article class="janela">
+            <div class="barra"><i></i><i></i><i></i><span>kinorafit.davitech.com.br</span></div>
+            <div class="corpo">
+              <h3>KinoraFit</h3>
+              <p>Aplicativo para registrar treinos e acompanhar a evolução de carga.</p><a class="abrir"
+                href="https://kinorafit.davitech.com.br" target="_blank" rel="noopener">Abrir site ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como" class="bloco grade">
+      <div class="wrap">
+        <span class="rotulo">PROCESSO</span>
+        <h2 class="titulo">Como funciona</h2>
+        <ol class="passos">
+          <li><b>Conversa</b><span>Você me conta como o negócio funciona hoje, pelo WhatsApp.</span></li>
+          <li><b>Proposta</b><span>Recebe o que será feito, o prazo e o valor antes de começar.</span></li>
+          <li><b>Construção</b><span>Eu desenvolvo e você testa no seu celular durante o processo.</span></li>
+          <li><b>No ar</b><span>Publico o projeto e acompanho o início do uso.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="bloco alt grade">
+      <div class="wrap sobre">
+        <div>
+          <span class="rotulo">QUEM FAZ</span>
+          <h2 class="titulo">Você fala direto comigo</h2>
+          <p>Sou o Davi, de Várzea Grande. Desenvolvo sites e sistemas para clientes reais.</p>
+        </div>
+        <ul class="tec" aria-label="Tecnologias que uso">
+          <li>Node.js</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Firebase</li>
+          <li>Python</li>
+          <li>Power BI</li>
+          <li>Apache Airflow</li>
+          <li>Docker</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CHAMADA FINAL -->
+    <section class="final grade">
+      <div class="wrap">
+        <span class="rotulo">VAMOS CONVERSAR</span>
+        <h2 class="titulo">Conte como é o seu negócio</h2>
+        <p class="sub">Mande uma mensagem com o que você faz hoje. Eu respondo com o que dá para resolver.</p>
+        <div class="acoes">
+          <a class="btn principal" data-wa href="https://wa.me/5565981044637" target="_blank" rel="noopener"><span
+              class="ic"><img src="img/whats.png" alt="WhatsApp" width="25" height="25"></span><span><small>FALE
+                COMIGO</small><strong>(65) 98104-4637</strong></span><b class="seta">↗</b></a>
+          <a class="btn secundario" href="https://instagram.com/davitech_ti" target="_blank" rel="noopener"><span
+              class="ic"><img src="img/insta.png" alt="Instagram" width="25"
+                height="25"></span><span><small>ACOMPANHE</small><strong>@davitech_ti</strong></span><b
+              class="seta">↗</b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="wrap">
-      <span class="rotulo">SERVIÇOS</span>
-      <h2 class="titulo">O que a DaviTech entrega</h2>
-      <p class="sub">Cada projeto começa pela rotina do seu negócio. Eu construo só o que você vai usar de verdade.</p>
-      <div class="servicos">
-        <article class="servico destaque"><span class="ico">&lt;/&gt;</span><h3>Site de vendas</h3><p>Página feita para receber o clique do anúncio e levar o cliente ao seu WhatsApp, com preços, fotos e perguntas frequentes.</p></article>
-        <article class="servico"><span class="ico">▣</span><h3>Sistema de vendas e estoque</h3><p>Registre vendas, acompanhe estoque, metas e gastos pelo celular, com login e comprovante em PDF.</p></article>
-        <article class="servico"><span class="ico"><img src="img/whats.png" alt="WhatsApp" width="25" height="25"></span><h3>Atendimento no WhatsApp</h3><p>Respostas automáticas, avisos e fidelização de clientes ligados ao seu sistema.</p></article>
-        <article class="servico"><span class="ico">▤</span><h3>Painel de dados</h3><p>Os números do negócio em gráficos claros no Power BI, para decidir sem adivinhar.</p></article>
-        <article class="servico"><span class="ico">⬒</span><h3>App instalável no celular</h3><p>Aplicativo que o cliente instala direto do navegador, sem precisar de loja de aplicativos.</p></article>
-      </div>
+      <span>IDEIAS EM CÓDIGO. <b>RESULTADOS NA WEB.</b></span>
+      <span>CUIABÁ / VÁRZEA GRANDE — MT</span>
     </div>
-  </section>
+  </footer>
 
-  <!-- TRABALHOS -->
-  <section id="trabalhos" class="bloco alt grade">
-    <div class="wrap">
-      <span class="rotulo">PROJETOS NO AR</span>
-      <h2 class="titulo">Trabalhos reais, abertos para você conferir</h2>
-      <div class="trabalhos">
-        <article class="janela"><div class="barra"><i></i><i></i><i></i><span>estercoturbinado.davitech.com.br</span></div><div class="corpo"><h3>Esterco Turbinado</h3><p>Página de venda de adubo orgânico, com pedido direto pelo WhatsApp.</p><a class="abrir" href="https://estercoturbinado.davitech.com.br" target="_blank" rel="noopener">Abrir site ↗</a></div></article>
-        <article class="janela"><div class="barra"><i></i><i></i><i></i><span>vendaadubo.davitech.com.br</span></div><div class="corpo"><h3>Sistema de vendas Gatti</h3><p>Vendas, histórico, metas, gastos e estoque, com acesso por login.</p><a class="abrir" href="https://vendaadubo.davitech.com.br" target="_blank" rel="noopener">Abrir site ↗</a></div></article>
-        <article class="janela"><div class="barra"><i></i><i></i><i></i><span>guiaadubo.davitech.com.br</span></div><div class="corpo"><h3>Área do lote</h3><p>Página pós-compra com guias em PDF de manejo para cada planta.</p><a class="abrir" href="https://guiaadubo.davitech.com.br" target="_blank" rel="noopener">Abrir site ↗</a></div></article>
-        <article class="janela"><div class="barra"><i></i><i></i><i></i><span>fidelizadosgatti.davitech.com.br</span></div><div class="corpo"><h3>Comunidade Gatti</h3><p>Clube de clientes com pontos, ranking e grupo no WhatsApp.</p><a class="abrir" href="https://fidelizadosgatti.davitech.com.br" target="_blank" rel="noopener">Abrir site ↗</a></div></article>
-        <article class="janela"><div class="barra"><i></i><i></i><i></i><span>kinorafit.davitech.com.br</span></div><div class="corpo"><h3>KinoraFit</h3><p>Aplicativo para registrar treinos e acompanhar a evolução de carga.</p><a class="abrir" href="https://kinorafit.davitech.com.br" target="_blank" rel="noopener">Abrir site ↗</a></div></article>
-      </div>
-    </div>
-  </section>
+  <div class="fixo"><a class="btn principal" data-wa href="https://wa.me/5565981044637" target="_blank"
+      rel="noopener"><img src="img/whats.png" alt="WhatsApp" width="25" height="25">Chamar no WhatsApp</a></div>
 
-  <!-- COMO FUNCIONA -->
-  <section id="como" class="bloco grade">
-    <div class="wrap">
-      <span class="rotulo">PROCESSO</span>
-      <h2 class="titulo">Como funciona</h2>
-      <ol class="passos">
-        <li><b>Conversa</b><span>Você me conta como o negócio funciona hoje, pelo WhatsApp.</span></li>
-        <li><b>Proposta</b><span>Recebe o que será feito, o prazo e o valor antes de começar.</span></li>
-        <li><b>Construção</b><span>Eu desenvolvo e você testa no seu celular durante o processo.</span></li>
-        <li><b>No ar</b><span>Publico o projeto e acompanho o início do uso.</span></li>
-      </ol>
-    </div>
-  </section>
+  <script>
+    // Mensagem que já vem escrita no WhatsApp do cliente.
+    // Se o visitante chegou por anúncio com utm_campaign ou utm_source, a origem vai junto.
+    (function () {
+      var msg = "Olá, Davi! Vi o site da DaviTech e quero conversar sobre o meu negócio.";
+      try {
+        var p = new URLSearchParams(location.search);
+        var origem = p.get("utm_campaign") || p.get("utm_source");
+        if (origem) msg += " (origem: " + origem + ")";
+      } catch (e) { }
+      document.querySelectorAll("[data-wa]").forEach(function (a) {
+        a.href = "https://wa.me/5565981044637?text=" + encodeURIComponent(msg);
+      });
+    })();
 
-  <!-- SOBRE -->
-  <section id="sobre" class="bloco alt grade">
-    <div class="wrap sobre">
-      <div>
-        <span class="rotulo">QUEM FAZ</span>
-        <h2 class="titulo">Você fala direto comigo</h2>
-        <p>Sou o Davi, de Várzea Grande. Desenvolvo sites e sistemas para clientes reais.</p>
-      </div>
-      <ul class="tec" aria-label="Tecnologias que uso">
-        <li>Node.js</li><li>TypeScript</li><li>React</li><li>Firebase</li><li>Python</li><li>Power BI</li><li>Apache Airflow</li><li>Docker</li>
-      </ul>
-    </div>
-  </section>
+    const botaoMenu = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('#menu-principal');
 
-  <!-- CHAMADA FINAL -->
-  <section class="final grade">
-    <div class="wrap">
-      <span class="rotulo">VAMOS CONVERSAR</span>
-      <h2 class="titulo">Conte como é o seu negócio</h2>
-      <p class="sub">Mande uma mensagem com o que você faz hoje. Eu respondo com o que dá para resolver.</p>
-      <div class="acoes">
-        <a class="btn principal" data-wa href="https://wa.me/5565981044637" target="_blank" rel="noopener"><span class="ic"><img src="img/whats.png" alt="WhatsApp" width="25" height="25"></span><span><small>FALE COMIGO</small><strong>(65) 98104-4637</strong></span><b class="seta">↗</b></a>
-        <a class="btn secundario" href="https://instagram.com/davitech_ti" target="_blank" rel="noopener"><span class="ic"><img src="img/insta.png" alt="Instagram" width="25" height="25"></span><span><small>ACOMPANHE</small><strong>@davitech_ti</strong></span><b class="seta">↗</b></a>
-      </div>
-    </div>
-  </section>
-</main>
+    botaoMenu.addEventListener('click', function () {
 
-<footer>
-  <div class="wrap">
-    <span>IDEIAS EM CÓDIGO. <b>RESULTADOS NA WEB.</b></span>
-    <span>CUIABÁ / VÁRZEA GRANDE — MT</span>
-  </div>
-</footer>
+      const aberto = menu.classList.toggle('aberto');
 
-<div class="fixo"><a class="btn principal" data-wa href="https://wa.me/5565981044637" target="_blank" rel="noopener"><img src="img/whats.png" alt="WhatsApp" width="25" height="25">Chamar no WhatsApp</a></div>
+      botaoMenu.classList.toggle('ativo', aberto);
 
-<script>
-  // Mensagem que já vem escrita no WhatsApp do cliente.
-  // Se o visitante chegou por anúncio com utm_campaign ou utm_source, a origem vai junto.
-  (function () {
-    var msg = "Olá, Davi! Vi o site da DaviTech e quero conversar sobre o meu negócio.";
-    try {
-      var p = new URLSearchParams(location.search);
-      var origem = p.get("utm_campaign") || p.get("utm_source");
-      if (origem) msg += " (origem: " + origem + ")";
-    } catch (e) {}
-    document.querySelectorAll("[data-wa]").forEach(function (a) {
-      a.href = "https://wa.me/5565981044637?text=" + encodeURIComponent(msg);
+      botaoMenu.setAttribute('aria-expanded', aberto);
+
+      botaoMenu.setAttribute(
+        'aria-label',
+        aberto ? 'Fechar menu' : 'Abrir menu'
+      );
+
     });
-  })();
-</script>
+
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function () {
+
+        menu.classList.remove('aberto');
+        botaoMenu.classList.remove('ativo');
+
+        botaoMenu.setAttribute('aria-expanded', 'false');
+        botaoMenu.setAttribute('aria-label', 'Abrir menu');
+
+      });
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        menu.classList.remove('aberto');
+        botaoMenu.classList.remove('ativo');
+        botaoMenu.setAttribute('aria-expanded', 'false');
+        botaoMenu.setAttribute('aria-label', 'Abrir menu');
+      }
+    });
+  </script>
 </body>
+
 </html>
