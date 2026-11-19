@@ -254,7 +254,7 @@ h3 {
 }
 
 .hero h1 {
-    font-size: clamp(35px, 5.6vw, 70px);
+    font-size: clamp(35px, 5.6vw, 45px);
     letter-spacing: -.04em;
     line-height: .99;
     animation: sobe .9s .1s both
@@ -488,7 +488,7 @@ section.bloco {
 }
 
 .titulo {
-    font-size: clamp(28px, 4.6vw, 52px);
+    font-size: clamp(28px, 4.6vw, 38px);
     max-width: 17ch
 }
 
