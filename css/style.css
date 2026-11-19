@@ -14,7 +14,32 @@
     box-sizing: border-box
 }
 
+body {
+    margin: 0;
+    position: relative;
+    isolation: isolate;
+    background: transparent;
+    color: var(--branco);
+    font-family: var(--fonte);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(rgba(3, 8, 13, .20), rgba(3, 8, 13, .20)),
+        url("../img/dashboard-tech.webp") center center / cover no-repeat;
+    pointer-events: none
+}
+
 html {
+    background: var(--bg);
     scroll-behavior: smooth;
     scroll-padding-top: 76px
 }
@@ -199,7 +224,7 @@ h3 {
     padding: 54px 0 70px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(90deg, rgba(3, 12, 25, .48) 0%, rgba(3, 12, 25, .28) 55%, rgba(3, 12, 25, .12) 100%)
+    background: linear-gradient(80deg, rgba(3, 12, 25, .35) 8%, rgba(3, 12, 25, .18) 100%, rgba(3, 12, 25, .09) 80%)
 }
 
 .hero-grid {
@@ -463,7 +488,7 @@ section.bloco {
 }
 
 .titulo {
-    font-size: clamp(32px, 4.6vw, 52px);
+    font-size: clamp(28px, 4.6vw, 52px);
     max-width: 17ch
 }
 
@@ -512,14 +537,14 @@ section.bloco {
 }
 
 .servico h3 {
-    font-size: 22px;
+    font-size: 19px;
     letter-spacing: -.02em;
     margin-bottom: 10px
 }
 
 .servico p {
     color: var(--suave);
-    font-size: 16px
+    font-size: 14px
 }
 
 .servico.destaque {
@@ -533,27 +558,6 @@ section.bloco {
 .servico.destaque .ico {
     margin: 0;
     grid-row: span 2
-}
-
-.servicos-cta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    margin-top: 28px;
-    padding: 22px 26px;
-    border: 1px solid var(--borda);
-    border-radius: 16px;
-    background: rgba(7, 24, 44, .65)
-}
-
-.servicos-cta p {
-    color: var(--suave);
-    max-width: 48ch
-}
-
-.servicos-cta .btn {
-    flex-shrink: 0
 }
 
 /* trabalhos: janelas de navegador */
@@ -619,7 +623,7 @@ section.bloco {
 
 .janela p {
     color: var(--suave);
-    font-size: 16px
+    font-size: 14px
 }
 
 .janela a.abrir {
@@ -628,7 +632,7 @@ section.bloco {
     color: var(--ciano);
     font-weight: 800;
     text-decoration: none;
-    font-size: 15px
+    font-size: 13px
 }
 
 .janela a.abrir:hover {
@@ -697,18 +701,59 @@ section.bloco {
     display: block
 }
 
-/* sobre */
+
+/* ---------- sobre / apresentação ---------- */
 .sobre {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 44px;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 48px;
     align-items: center
+}
+
+.sobre-texto .titulo {
+    max-width: 19ch
 }
 
 .sobre p {
     color: #bccddc;
-    max-width: 46ch;
+    max-width: 52ch;
     margin-top: 16px
+}
+
+.sobre-cta {
+    display: inline-flex;
+    margin-top: 24px;
+    align-items: center;
+    gap: 12px
+}
+
+.sobre-capacidades {
+    padding: 28px;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    background: rgba(4, 16, 30, .62);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .18)
+}
+
+.sobre-capacidades h3 {
+    font-size: 22px;
+    margin-bottom: 8px
+}
+
+.sobre-capacidades > p {
+    margin: 0 0 22px
+}
+
+.tec-grupos {
+    display: grid;
+    gap: 18px
+}
+
+.tec-grupo > b {
+    display: block;
+    color: var(--ciano);
+    font-size: 14px;
+    margin-bottom: 9px
 }
 
 .tec {
@@ -717,15 +762,15 @@ section.bloco {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px
+    gap: 8px
 }
 
 .tec li {
-    padding: 9px 16px;
+    padding: 7px 12px;
     border: 1px solid var(--borda-forte);
     border-radius: 999px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     background: rgba(0, 217, 255, .05)
 }
 
@@ -747,22 +792,108 @@ section.bloco {
 
 footer {
     border-top: 1px solid rgba(0, 217, 255, .2);
-    padding: 26px 0 96px;
+    padding: 34px 0 96px;
     color: #8ca7bd;
+    background: rgba(5, 13, 25, .82);
     font-size: 13px;
     letter-spacing: 1.5px;
     font-weight: 600
 }
 
 footer .wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 18px
 }
 
 footer b {
     color: var(--ciano)
+}
+
+footer .rodape-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+    text-align: right
+}
+
+footer button.abrir-politica {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--ciano);
+    font: inherit;
+    letter-spacing: inherit;
+    cursor: pointer
+}
+
+footer button.abrir-politica:hover,
+footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px
+}
+
+.modal-politica {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(2, 8, 16, .82);
+    backdrop-filter: blur(10px)
+}
+
+.modal-politica[hidden] {
+    display: none
+}
+
+.modal-politica .janela-politica {
+    width: min(760px, 100%);
+    max-height: min(78vh, 720px);
+    overflow-y: auto;
+    padding: clamp(22px, 5vw, 42px);
+    border: 1px solid var(--borda-forte);
+    border-radius: 18px;
+    background: #07182c;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .45)
+}
+
+.modal-politica h2 {
+    margin-bottom: 18px;
+    color: var(--branco);
+    font-size: clamp(26px, 5vw, 38px)
+}
+
+.modal-politica h3 {
+    margin: 22px 0 8px;
+    color: var(--ciano);
+    font-size: 18px
+}
+
+.modal-politica p,
+.modal-politica li {
+    color: var(--suave);
+    line-height: 1.75
+}
+
+.modal-politica ul {
+    padding-left: 22px
+}
+
+.modal-politica .fechar-politica {
+    display: block;
+    margin: 26px 0 0 auto;
+    padding: 11px 18px;
+    border: 1px solid var(--borda-forte);
+    border-radius: 10px;
+    background: rgba(0, 217, 255, .08);
+    color: var(--branco);
+    font-weight: 800;
+    cursor: pointer
 }
 
 /* barra fixa no celular */
@@ -845,12 +976,23 @@ footer b {
         height: 400px
     }
 
-    .servicos {
-        grid-template-columns: 1fr 1fr
+    .servicos,
+    .trabalhos,
+    .diferenciais {
+        grid-template-columns: 1fr
     }
 
     .servico.destaque {
-        grid-column: span 2
+        grid-column: auto;
+        display: block
+    }
+
+    .servico.destaque .ico {
+        margin: 0 0 18px
+    }
+
+    .janela:last-child:nth-child(odd) {
+        grid-column: auto
     }
 
     .passos {
@@ -865,85 +1007,56 @@ footer b {
 
 @media (max-width:640px) {
     body {
-        font-size: 16px
+        font-size: 16px;
+        background: var(--bg);
+        background-image: none
+    }
+
+    body::before {
+        background-position: center top;
+        background-size: cover;
+        background-image:
+            linear-gradient(rgba(3, 8, 10, .10), rgba(3, 8, 10, .10)),
+            url("../img/dashboard-tech.webp")
     }
 
     section.bloco {
         padding: 60px 0
     }
 
-    .pontos {
-        grid-template-columns: 1fr
+    .hero {
+        background: linear-gradient(55deg, rgba(3, 12, 25, .12), rgba(3, 12, 25, .05) 80%, rgba(3, 12, 25, .02))
     }
 
-    .acoes .btn {
-        flex: 1 1 100%
+    .alt {
+        background: rgba(7, 24, 44, .18)
     }
 
-    .servicos,
-    .trabalhos {
-        grid-template-columns: 1fr
+    .servico {
+        background: linear-gradient(160deg, rgba(7, 24, 44, .68), rgba(5, 13, 25, .68))
     }
 
-    .servicos-cta {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 20px
+    .sobre-capacidades {
+        background: rgba(4, 16, 30, .42)
     }
 
-    .servicos-cta .btn {
-        font-size: 15px;
-        justify-content: center
+    .final {
+        background: radial-gradient(ellipse at 85% 60%, rgba(0, 145, 255, .08), transparent 45%), linear-gradient(120deg, rgba(6, 19, 35, .22), rgba(7, 24, 44, .22))
     }
 
-    .servico.destaque,
-    .janela:last-child:nth-child(odd) {
-        grid-column: auto
+    footer {
+        padding: 28px 0 112px;
+        text-align: center
     }
 
-    .servico.destaque {
-        display: block
+    footer .wrap {
+        grid-template-columns: 1fr;
+        justify-items: center
     }
 
-    .servico.destaque .ico {
-        margin-bottom: 18px
-    }
-
-    .passos {
-        grid-template-columns: 1fr
-    }
-
-    .topo .btn.mini {
-        display: none
-    }
-
-    .flutua.um {
-        left: 0;
-        top: 40px
-    }
-
-    .flutua.dois {
-        right: 0;
-        bottom: 50px
-    }
-
-    .fixo {
-        display: block;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 40;
-        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
-        background: rgba(5, 13, 25, .96);
-        border-top: 1px solid var(--borda)
-    }
-
-    .fixo .btn {
-        width: 100%;
+    footer .rodape-links {
         justify-content: center;
-        padding: 15px;
-        font-size: 17px
+        text-align: center
     }
 }
 
@@ -1038,3 +1151,88 @@ footer b {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+/* Portfólio: apresentação dos cases */
+.case-categoria {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 5px 9px;
+    border: 1px solid var(--borda);
+    border-radius: 999px;
+    color: var(--ciano);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase
+}
+
+.janela .corpo p {
+    margin: 0
+}
+
+.janela .corpo p b {
+    color: var(--branco)
+}
+
+.case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    list-style: none;
+    margin: 8px 0 12px;
+    padding: 0
+}
+
+.case-tags li {
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: rgba(0, 217, 255, .07);
+    border: 1px solid rgba(0, 217, 255, .15);
+    color: var(--suave);
+    font-size: 12px;
+    font-weight: 600
+}
+
+/* Diferenciais */
+.diferenciais {
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 18px
+}
+
+.diferencial {
+    padding: 25px;
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    background: linear-gradient(160deg, rgba(7, 24, 44, .9), rgba(5, 13, 25, .9));
+    transition: border-color .25s, transform .25s
+}
+
+.diferencial:hover {
+    border-color: var(--borda-forte);
+    transform: translateY(-3px)
+}
+
+.diferencial .ico {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 18px;
+    border: 1px solid var(--borda-forte);
+    border-radius: 11px;
+    color: var(--ciano);
+    font: 700 20px ui-monospace, Menlo, Consolas, monospace;
+    box-shadow: inset 0 0 14px rgba(0, 217, 255, .08)
+}
+
+.diferencial h3 {
+    font-size: 19px;
+    margin-bottom: 10px
+}
+
+.diferencial p {
+    color: var(--suave);
+    font-size: 14px
+}
+

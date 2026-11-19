@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://davitech.com.br/sitemap.xml
