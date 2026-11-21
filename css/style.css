@@ -32,10 +32,10 @@ body::before {
     position: fixed;
     inset: -20px;
     z-index: -1;
-    filter: blur(3px);
+    filter: blur(4px);
     transform: scale(1.05);
     background:
-        linear-gradient(rgba(3, 8, 13, .35), rgba(3, 8, 13, .35)),
+        linear-gradient(rgba(5, 13, 25, .40), rgba(5, 13, 25, .40)),
         url("../img/dashboard-tech.webp") center center / cover no-repeat;
     pointer-events: none;
 }
@@ -822,81 +822,19 @@ footer .rodape-links {
     text-align: right
 }
 
-footer button.abrir-politica {
-    padding: 0;
-    border: 0;
-    background: none;
+footer a.abrir-politica {
     color: var(--ciano);
     font: inherit;
     letter-spacing: inherit;
-    cursor: pointer
+    text-decoration: none
 }
 
-footer button.abrir-politica:hover,
+footer a.abrir-politica:hover,
 footer a:hover {
     text-decoration: underline;
     text-underline-offset: 4px
 }
 
-.modal-politica {
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-    display: grid;
-    place-items: center;
-    padding: 20px;
-    background: rgba(2, 8, 16, .82);
-    backdrop-filter: blur(10px)
-}
-
-.modal-politica[hidden] {
-    display: none
-}
-
-.modal-politica .janela-politica {
-    width: min(760px, 100%);
-    max-height: min(78vh, 720px);
-    overflow-y: auto;
-    padding: clamp(22px, 5vw, 42px);
-    border: 1px solid var(--borda-forte);
-    border-radius: 18px;
-    background: #07182c;
-    box-shadow: 0 24px 70px rgba(0, 0, 0, .45)
-}
-
-.modal-politica h2 {
-    margin-bottom: 18px;
-    color: var(--branco);
-    font-size: clamp(26px, 5vw, 38px)
-}
-
-.modal-politica h3 {
-    margin: 22px 0 8px;
-    color: var(--ciano);
-    font-size: 18px
-}
-
-.modal-politica p,
-.modal-politica li {
-    color: var(--suave);
-    line-height: 1.75
-}
-
-.modal-politica ul {
-    padding-left: 22px
-}
-
-.modal-politica .fechar-politica {
-    display: block;
-    margin: 26px 0 0 auto;
-    padding: 11px 18px;
-    border: 1px solid var(--borda-forte);
-    border-radius: 10px;
-    background: rgba(0, 217, 255, .08);
-    color: var(--branco);
-    font-weight: 800;
-    cursor: pointer
-}
 
 /* barra fixa no celular */
 .fixo {
@@ -1022,7 +960,7 @@ footer a:hover {
         background-position: center top;
         background-size: cover;
         background-image:
-            linear-gradient(rgba(3, 8, 10, .10), rgba(3, 8, 10, .10)),
+            linear-gradient(rgba(5, 13, 25, .40), rgba(5, 13, 25, .40)),
             url("../img/dashboard-tech.webp")
     }
 
@@ -1107,30 +1045,33 @@ footer a:hover {
 @media (max-width: 900px) {
 
     .topo .wrap {
+        position: relative;
         justify-content: flex-start;
+    }
+
+    /* menu à esquerda, logo à direita, texto centralizado */
+    .menu-toggle {
+        display: flex;
+        order: 1;
     }
 
     .marca {
         order: 2;
         margin-left: auto;
-        gap: 90px;
     }
 
-    .marca-sinal {
-        margin-left: 0;
-
-    }
-
-    .menu-toggle {
-        display: flex;
-        order: 1;
+    .marca-texto {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .menu {
         display: none;
         position: absolute;
         top: 68px;
-        right: 0;
+        left: 0;
         width: min(280px, calc(100vw - 44px));
         padding: 18px;
         flex-direction: column;
@@ -1166,6 +1107,14 @@ footer a:hover {
 
     .menu-toggle.ativo span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* telas muito estreitas: texto um pouco menor para não encostar no menu/logo */
+@media (max-width: 400px) {
+    .marca-texto {
+        font-size: 15px;
+        letter-spacing: 1px;
     }
 }
 
@@ -1257,5 +1206,80 @@ footer a:hover {
 @media (max-width: 900px) {
     .diferenciais {
         grid-template-columns: 1fr
+    }
+}
+
+/* ---------- página de política de privacidade ---------- */
+.voltar {
+    color: var(--suave);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none
+}
+
+.voltar:hover {
+    color: var(--ciano)
+}
+
+.politica-pagina {
+    padding: clamp(36px, 7vw, 72px) 0
+}
+
+.politica {
+    width: min(780px, 100%);
+    margin-inline: auto;
+    padding: clamp(20px, 5vw, 40px);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    background: rgba(5, 13, 25, .9)
+}
+
+.politica p {
+    margin: 0 0 14px
+}
+
+.politica h1 {
+    margin: 0 0 18px;
+    font-size: clamp(30px, 6vw, 44px);
+    line-height: 1.15
+}
+
+.politica h2 {
+    margin: 34px 0 10px;
+    color: var(--ciano);
+    font-size: 20px
+}
+
+.politica p,
+.politica li {
+    color: var(--suave);
+    line-height: 1.75
+}
+
+.politica ul {
+    padding-left: 22px
+}
+
+.politica a:not(.btn) {
+    color: var(--ciano)
+}
+
+.politica code {
+    padding: 1px 6px;
+    border-radius: 6px;
+    background: rgba(0, 217, 255, .1);
+    color: var(--branco);
+    font-size: .9em
+}
+
+@media (max-width: 900px) {
+    .voltar {
+        order: 1;
+        font-size: 24px;
+        line-height: 1
+    }
+
+    .voltar-texto {
+        display: none
     }
 }
